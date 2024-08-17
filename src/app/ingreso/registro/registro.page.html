@@ -1,0 +1,95 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Registro</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Registro</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div class="ion-padding">
+    <form [formGroup]="registerForm" (ngSubmit)="onRegister()">
+      <!-- Cédula -->
+      <ion-item>
+        <ion-label position="floating">Cédula</ion-label>
+        <ion-input formControlName="idCard" type="text" required></ion-input>
+      </ion-item>
+
+      <!-- Nombre -->
+      <ion-item>
+        <ion-label position="floating">Nombre</ion-label>
+        <ion-input formControlName="firstName" type="text" required></ion-input>
+      </ion-item>
+
+      <!-- Apellidos -->
+      <ion-item>
+        <ion-label position="floating">Apellidos</ion-label>
+        <ion-input formControlName="lastName" type="text" required></ion-input>
+      </ion-item>
+
+      <!-- Género -->
+      <ion-item>
+        <ion-label>Género</ion-label>
+        <ion-select formControlName="gender" placeholder="Seleccionar">
+          <ion-select-option value="male">Masculino</ion-select-option>
+          <ion-select-option value="female">Femenino</ion-select-option>
+          <ion-select-option value="other">Otro</ion-select-option>
+        </ion-select>
+      </ion-item>
+
+      <!-- Dirección -->
+      <ion-item>
+        <ion-label position="floating">Dirección</ion-label>
+        <ion-input formControlName="address" type="text" required></ion-input>
+      </ion-item>
+
+      <!-- Ciudad -->
+      <ion-item>
+        <ion-label>Ciudad</ion-label>
+        <ion-select formControlName="city" placeholder="Seleccionar">
+          <ion-select-option value="city1">Ciudad 1</ion-select-option>
+          <ion-select-option value="city2">Ciudad 2</ion-select-option>
+          <!-- Agrega más ciudades según sea necesario -->
+        </ion-select>
+      </ion-item>
+
+      <!-- Zona -->
+      <ion-item>
+        <ion-label>Zona</ion-label>
+        <ion-select formControlName="zone" placeholder="Seleccionar">
+          <ion-select-option value="zone1">Zona 1</ion-select-option>
+          <ion-select-option value="zone2">Zona 2</ion-select-option>
+          <!-- Agrega más zonas según sea necesario -->
+        </ion-select>
+      </ion-item>
+
+      <!-- Recinto -->
+      <ion-item>
+        <ion-label>Recinto</ion-label>
+        <ion-select formControlName="precinct" placeholder="Seleccionar">
+          <ion-select-option value="precinct1">Recinto 1</ion-select-option>
+          <ion-select-option value="precinct2">Recinto 2</ion-select-option>
+          <!-- Agrega más recintos según sea necesario -->
+        </ion-select>
+      </ion-item>
+
+      <!-- Teléfono 1 -->
+      <ion-item>
+        <ion-label position="floating">Teléfono 1</ion-label>
+        <ion-input formControlName="phone1" type="tel" required></ion-input>
+      </ion-item>
+
+      <!-- Teléfono 2 -->
+      <ion-item>
+        <ion-label position="floating">Teléfono 2</ion-label>
+        <ion-input formControlName="phone2" type="tel"></ion-input>
+      </ion-item>
+
+      <ion-button expand="block" color="primary" type="submit" [disabled]="registerForm.invalid">Registrarse</ion-button>
+    </form>
+  </div>
+</ion-content>

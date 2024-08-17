@@ -3,34 +3,34 @@ import { TabsPage } from './tabs.page';
 
 export const routes: Routes = [
   {
-    path: 'tabs',
+    path: '',
     component: TabsPage,
     children: [
       {
-        path: 'tab1',
+        path: 'configuracion',
         loadComponent: () =>
-          import('../tab1/tab1.page').then((m) => m.Tab1Page),
+          import('../configuracion/configuracion.page').then((m) => m.ConfiguracionPage),
       },
       {
-        path: 'tab2',
+        path: 'actas',
         loadComponent: () =>
-          import('../tab2/tab2.page').then((m) => m.Tab2Page),
+          import('../registroacta/registroacta.page').then((m) => m.RegistroactaPage),
       },
       {
-        path: 'tab3',
+        path: 'perfil',
         loadComponent: () =>
-          import('../tab3/tab3.page').then((m) => m.Tab3Page),
+          import('../perfil/perfil.page').then((m) => m.PerfilPage),
       },
       {
         path: '',
-        redirectTo: '/tabs/tab1',
+        redirectTo: 'actas',
         pathMatch: 'full',
       },
     ],
   },
   {
     path: '',
-    redirectTo: '/tabs/tab1',
+    redirectTo: 'actas',
     pathMatch: 'full',
   },
 ];
