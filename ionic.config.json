@@ -1,0 +1,7 @@
+{
+  "name": "DAWMCristalVoto",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}
