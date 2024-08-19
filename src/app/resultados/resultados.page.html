@@ -1,0 +1,84 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="regresar()">
+        <ion-icon aria-hidden="true" name="arrow-back"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>resultados</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Información del Usuario</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+
+      <!-- Información del acta -->
+      <ion-item lines="none">
+        <ion-label>Cédula:</ion-label>
+        <ion-note slot="end">0987654321</ion-note>
+      </ion-item>
+
+      <ion-item lines="none">
+        <ion-label>Nombres:</ion-label>
+        <ion-note slot="end">Juan Alfredo</ion-note>
+      </ion-item>
+
+      <ion-item lines="none">
+        <ion-label>Apellidos:</ion-label>
+        <ion-note slot="end">Pérez Pérez</ion-note>
+      </ion-item>
+
+      <ion-item lines="none">
+        <ion-label>Género:</ion-label>
+        <ion-note slot="end">Masculino</ion-note>
+      </ion-item>
+
+      <ion-item lines="none">
+        <ion-label>Dirección:</ion-label>
+        <ion-note slot="end">123 Calle Principal, Calle secundaria</ion-note>
+      </ion-item>
+
+      <ion-item lines="none">
+        <ion-label>Ciudad</ion-label>
+        <ion-note slot="end">Guayaquil</ion-note>
+      </ion-item>
+      
+      <ion-item lines="none">
+        <ion-label>Zona:</ion-label>
+        <ion-note slot="end">Sin Zona</ion-note>
+      </ion-item>
+
+      <ion-item lines="none">
+        <ion-label>Recinto:</ion-label>
+        <ion-note slot="end">Recinto 1</ion-note>
+      </ion-item>
+
+      <ion-item lines="none">
+        <ion-label>Correo Electrónico:</ion-label>
+        <ion-note slot="end">juan.perez&#64;example.com</ion-note>
+      </ion-item>
+
+      <ion-item lines="none">
+        <ion-label>Teléfono 1:</ion-label>
+        <ion-note slot="end">+1234567890</ion-note>
+      </ion-item>
+
+      <ion-item lines="none">
+        <ion-label>Teléfono 2:</ion-label>
+        <ion-note slot="end">+1234567890</ion-note>
+      </ion-item>
+    </ion-card-content>
+
+    <ion-footer>
+      <ion-button (click)='regresar()'>
+        Regresar
+      </ion-button>
+    </ion-footer>
+
+  </ion-card>
+</ion-content>
