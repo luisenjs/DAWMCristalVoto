@@ -33,59 +33,54 @@
       </ion-grid>
 
       <!-- Información del Usuario -->
-      <ion-item lines="none">
-        <ion-label>Cédula:</ion-label>
-        <ion-note slot="end">0987654321</ion-note>
+      <ion-item>
+        <ion-label>Cédula</ion-label>
+        <ion-text>{{ userData.cedula }}</ion-text>
       </ion-item>
 
-      <ion-item lines="none">
-        <ion-label>Nombres:</ion-label>
-        <ion-note slot="end">Juan Alfredo</ion-note>
+      <ion-item>
+        <ion-label>Nombre</ion-label>
+        <ion-text>{{ userData.nombres }}</ion-text>
       </ion-item>
 
-      <ion-item lines="none">
-        <ion-label>Apellidos:</ion-label>
-        <ion-note slot="end">Pérez Pérez</ion-note>
+      <ion-item>
+        <ion-label>Apellidos</ion-label>
+        <ion-text>{{ userData.apellidos }}</ion-text>
       </ion-item>
 
-      <ion-item lines="none">
-        <ion-label>Género:</ion-label>
-        <ion-note slot="end">Masculino</ion-note>
+      <ion-item>
+        <ion-label>Género</ion-label>
+        <ion-text>{{ userData.genero }}</ion-text>
       </ion-item>
 
-      <ion-item lines="none">
-        <ion-label>Dirección:</ion-label>
-        <ion-note slot="end">123 Calle Principal, Calle secundaria</ion-note>
+      <ion-item>
+        <ion-label>Dirección</ion-label>
+        <ion-text>{{ userData.direccion }}</ion-text>
       </ion-item>
 
-      <ion-item lines="none">
+      <ion-item>
         <ion-label>Ciudad</ion-label>
-        <ion-note slot="end">Guayaquil</ion-note>
-      </ion-item>
-      
-      <ion-item lines="none">
-        <ion-label>Zona:</ion-label>
-        <ion-note slot="end">Sin Zona</ion-note>
+        <ion-text>{{ userData.ciudad }}</ion-text>
       </ion-item>
 
-      <ion-item lines="none">
-        <ion-label>Recinto:</ion-label>
-        <ion-note slot="end">Recinto 1</ion-note>
+      <ion-item>
+        <ion-label>Zona</ion-label>
+        <ion-text>{{ userData.zona }}</ion-text>
       </ion-item>
 
-      <ion-item lines="none">
-        <ion-label>Correo Electrónico:</ion-label>
-        <ion-note slot="end">juan.perez&#64;example.com</ion-note>
+      <ion-item>
+        <ion-label>Recinto</ion-label>
+        <ion-text>{{ userData.recinto }}</ion-text>
       </ion-item>
 
-      <ion-item lines="none">
-        <ion-label>Teléfono 1:</ion-label>
-        <ion-note slot="end">+1234567890</ion-note>
+      <ion-item>
+        <ion-label>Teléfono 1</ion-label>
+        <ion-text>{{ userData.telefono1 }}</ion-text>
       </ion-item>
 
-      <ion-item lines="none">
-        <ion-label>Teléfono 2:</ion-label>
-        <ion-note slot="end">+1234567890</ion-note>
+      <ion-item>
+        <ion-label>Teléfono 2</ion-label>
+        <ion-text>{{ userData.telefono2 }}</ion-text>
       </ion-item>
     </ion-card-content>
   </ion-card>
