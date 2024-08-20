@@ -12,6 +12,8 @@ $RECYCLE.BIN/
 *.log
 log.txt
 
+# Ignorar archivos de entorno
+src/environments/environment.ts
 
 /.sourcemaps
 /.versions
