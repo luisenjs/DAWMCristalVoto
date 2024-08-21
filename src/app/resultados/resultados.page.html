@@ -12,66 +12,160 @@
 <ion-content>
   <ion-card>
     <ion-card-header>
-      <ion-card-title>Información del Usuario</ion-card-title>
+      <ion-card-title>Resultados del Acta</ion-card-title>
     </ion-card-header>
 
     <ion-card-content>
 
       <!-- Información del acta -->
       <ion-item lines="none">
-        <ion-label>Cédula:</ion-label>
+        <ion-label>Papeleta:</ion-label>
         <ion-note slot="end">0987654321</ion-note>
       </ion-item>
 
       <ion-item lines="none">
-        <ion-label>Nombres:</ion-label>
+        <ion-label>Provincia:</ion-label>
         <ion-note slot="end">Juan Alfredo</ion-note>
       </ion-item>
 
       <ion-item lines="none">
-        <ion-label>Apellidos:</ion-label>
+        <ion-label>Canton:</ion-label>
         <ion-note slot="end">Pérez Pérez</ion-note>
       </ion-item>
 
       <ion-item lines="none">
-        <ion-label>Género:</ion-label>
+        <ion-label>Parroquia:</ion-label>
         <ion-note slot="end">Masculino</ion-note>
       </ion-item>
 
       <ion-item lines="none">
-        <ion-label>Dirección:</ion-label>
+        <ion-label>Zona:</ion-label>
         <ion-note slot="end">123 Calle Principal, Calle secundaria</ion-note>
       </ion-item>
 
       <ion-item lines="none">
-        <ion-label>Ciudad</ion-label>
+        <ion-label>Recinto:</ion-label>
         <ion-note slot="end">Guayaquil</ion-note>
       </ion-item>
       
-      <ion-item lines="none">
-        <ion-label>Zona:</ion-label>
-        <ion-note slot="end">Sin Zona</ion-note>
-      </ion-item>
+      <ion-card-subtitle>Cantidad de Votos</ion-card-subtitle>
 
-      <ion-item lines="none">
-        <ion-label>Recinto:</ion-label>
-        <ion-note slot="end">Recinto 1</ion-note>
-      </ion-item>
+      <ion-grid>
+        <ion-row>
 
-      <ion-item lines="none">
-        <ion-label>Correo Electrónico:</ion-label>
-        <ion-note slot="end">juan.perez&#64;example.com</ion-note>
-      </ion-item>
+          <ion-col>
+            <ion-label>Totales:</ion-label>
+            <ion-item lines="none">
+              <ion-note slot="end">300</ion-note>
+            </ion-item>
+          </ion-col>
 
-      <ion-item lines="none">
-        <ion-label>Teléfono 1:</ion-label>
-        <ion-note slot="end">+1234567890</ion-note>
-      </ion-item>
+          <ion-col>
+            <ion-label>Validos:</ion-label>
+            <ion-item lines="none">
+              <ion-note slot="end">200</ion-note>
+            </ion-item>
+          </ion-col>
 
-      <ion-item lines="none">
-        <ion-label>Teléfono 2:</ion-label>
-        <ion-note slot="end">+1234567890</ion-note>
-      </ion-item>
+          <ion-col>
+            <ion-label>Blancos:</ion-label>
+            <ion-item lines="none">
+              <ion-note slot="end">80</ion-note>
+            </ion-item>
+          </ion-col>
+
+          <ion-col>
+            <ion-label>Nulos:</ion-label>
+            <ion-item lines="none">
+              <ion-note slot="end">20</ion-note>
+            </ion-item>
+          </ion-col>
+        
+        </ion-row>
+      </ion-grid>
+
+      <ion-grid>
+
+        <ion-row>
+
+          <ion-col size="9">
+            <ion-label>Candidato</ion-label>
+          </ion-col>
+
+          <ion-col>
+            <ion-label>Total Votos</ion-label>
+          </ion-col>
+
+        </ion-row>
+
+        <ion-row>
+
+          <ion-col size="9">
+            <ion-item lines="none">
+              <ion-label>Daniel Noboa - ADN</ion-label>
+            </ion-item>
+          </ion-col>
+
+          <ion-col>
+            <ion-item lines="none">
+              <ion-note slot="end">75</ion-note>
+            </ion-item>
+          </ion-col>
+
+        </ion-row>
+
+        <ion-row>
+
+          <ion-col size="9">
+            <ion-item lines="none">
+              <ion-label>Luisa Gonzalez - RC</ion-label>
+            </ion-item>
+          </ion-col>
+
+          <ion-col>
+            <ion-item lines="none">
+              <ion-note slot="end">65</ion-note>
+            </ion-item>
+          </ion-col>
+
+        </ion-row>
+
+        <ion-row>
+
+          <ion-col size="9">
+            <ion-item lines="none">
+              <ion-label>Jan Topic - PSC</ion-label>
+            </ion-item>
+          </ion-col>
+
+          <ion-col>
+            <ion-item lines="none">
+              <ion-note slot="end">35</ion-note>
+            </ion-item>
+          </ion-col>
+
+        </ion-row>
+
+        <ion-row>
+
+          <ion-col size="9">
+            <ion-item lines="none">
+              <ion-label>Christian Zurita - MC25</ion-label>
+            </ion-item>
+          </ion-col>
+
+          <ion-col>
+            <ion-item lines="none">
+              <ion-note slot="end">25</ion-note>
+            </ion-item>
+          </ion-col>
+
+        </ion-row>
+
+      </ion-grid>
+
+      <ion-button expand="full" type="submit" (click)="presentAlert()">Guardar y Enviar</ion-button>
+
     </ion-card-content>
   </ion-card>
 </ion-content>
