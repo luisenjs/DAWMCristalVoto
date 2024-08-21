@@ -5,6 +5,7 @@ import { Router } from '@angular/router';
 import { IonContent, IonHeader, IonTitle, IonToolbar, IonItem, IonLabel, IonText, IonNote, IonRow, IonCol, IonButton, IonCard, IonCardHeader, IonCardContent, IonCardTitle, IonList, IonAvatar, IonGrid, IonButtons } from '@ionic/angular/standalone';
 import { UserService } from '../services/user.service';
 import { getDatabase, ref, get } from 'firebase/database';
+import { PhotoService } from '../services/photo.service';
 
 @Component({
   selector: 'app-perfil',
@@ -16,10 +17,9 @@ import { getDatabase, ref, get } from 'firebase/database';
 export class PerfilPage implements OnInit {
   userData: any = {};
   private router = inject(Router)
-  constructor(private userService: UserService) { }
+  constructor(private userService: UserService, private photoService: PhotoService) { }
 
   ngOnInit() {
-    console.log(this.userService)
     const cedula = this.userService.getUserCedula();
 
     if (cedula) {
@@ -44,6 +44,7 @@ export class PerfilPage implements OnInit {
 
   logout() {
     this.userService.setUserCedula("");
+    this.photoService.clearPhoto();
     this.router.navigate(['/'])
   }
 

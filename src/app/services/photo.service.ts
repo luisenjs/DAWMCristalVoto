@@ -11,7 +11,7 @@ import { UserPhoto } from '../interfaces/user-photo';
 })
 export class PhotoService {
   /* 3. Atributo para almacenar las fotos */
-  public photos: UserPhoto[] = [];
+  public photos: UserPhoto | null = null;
 
   constructor() { }
 
@@ -25,9 +25,13 @@ export class PhotoService {
     });
 
     /* 5. Agregue el archivo al inicio del arreglo */
-    this.photos.unshift({
+    this.photos = {
       filepath: "soon...",
       webviewPath: capturedPhoto.webPath!
-    });
+    };
+  }
+
+  public clearPhoto(){
+    this.photos = null;
   }
 }

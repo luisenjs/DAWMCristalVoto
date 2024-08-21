@@ -6,6 +6,7 @@ import { initializeApp } from 'firebase/app';
 import { getDatabase, ref, set } from 'firebase/database';
 import { environment } from '../../../environments/environment';
 import { Router } from '@angular/router';
+import { AlertController } from '@ionic/angular';
 
 @Component({
   selector: 'app-registro',
@@ -20,8 +21,8 @@ export class RegistroPage implements OnInit {
 
   registroForm: FormGroup;
   database: any;
-  
-  constructor(private formBuilder: FormBuilder) {
+
+  constructor(private formBuilder: FormBuilder, private alertController: AlertController) {
     this.registroForm = this.formBuilder.group({});
     const app = initializeApp(environment.firebaseConfig);
     this.database = getDatabase(app);
@@ -30,6 +31,7 @@ export class RegistroPage implements OnInit {
   ngOnInit() {
     this.registroForm = this.formBuilder.group({
       cedula: ['', [Validators.required, Validators.pattern('^[0-9]{10}$')]],
+      contraseña: ['', Validators.required],
       nombres: ['', Validators.required],
       apellidos: ['', Validators.required],
       genero: ['', Validators.required],
@@ -42,13 +44,24 @@ export class RegistroPage implements OnInit {
     });
   }
 
+  async presentAlert() {
+    const alert = await this.alertController.create({
+      header: 'Registro Completo',
+      message: 'Usuario registrado con éxito!'
+    });
+    await alert.present();
+    setTimeout(() => {
+      alert.dismiss();
+    }, 1500);
+  }
+
   onSubmit() {
     if (this.registroForm.valid) {
       const formData = this.registroForm.value;
       const userRef = ref(this.database, "usuarios/" + formData.cedula);
       set(userRef, formData)
         .then(() => {
-          console.log('Datos guardados con éxito');
+          this.presentAlert();
           this.router.navigate(['/'])
         })
         .catch((error: any) => {

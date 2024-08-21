@@ -1,0 +1,74 @@
+// Estilos generales para el header
+ion-header {
+    --background: #000; // Fondo negro base
+    background: linear-gradient(135deg, #1e2e38, #1f1f1f, #1f1f1f, #1e2e38); // Gradiente oscuro
+  }
+  
+  // Estilos para el toolbar dentro del header
+  ion-toolbar {
+    --background: transparent; // Toolbar transparente para mostrar el gradiente
+    
+  }
+  
+  ion-title {
+    color: #ffffff; // Color del texto blanco
+  }
+  
+  // Estilos para el contenido principal
+  ion-content {
+    --background: #121212; // Fondo oscuro para el contenido
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  // Estilos para el formulario
+  form {
+    width: 100%;
+    max-width: 400px; // Ancho máximo del formulario
+    background-color: #1e1e1e; // Fondo oscuro del formulario
+    padding: 24px;
+    border-radius: 12px; // Bordes redondeados
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5); // Sombra más pronunciada
+  }
+  
+  // Estilo para los ítems del formulario
+  ion-item {
+    margin-bottom: 16px;
+    --background: #2c2c2c; // Fondo oscuro para los ítems
+    --border-color: #444; // Color del borde
+    border-radius: 8px; // Bordes redondeados para los ítems
+  }
+  
+  // Estilo para los botones
+  ion-button {
+    margin-top: 12px;
+    border-radius: 12px; // Bordes redondeados para los botones
+    font-weight: bold; // Texto en negrita
+  }
+  
+  ion-button[color="primary"] {
+    --background: #6200ee; // Color de fondo morado oscuro
+    --color: #ffffff; // Color del texto blanco
+    --border-radius: 12px;
+  }
+  
+  ion-button[color="secondary"] {
+    --background: #03dac5; // Color de fondo verde claro
+    --color: #ffffff; // Color del texto blanco
+    --border-radius: 12px;
+  }
+  
+  ion-button[fill="clear"] {
+    --background: transparent;
+    --color: #ffffff;
+    --border-radius: 12px;
+    text-decoration: underline; // Subrayado para texto claro
+  }
+  
+  // Estilo para botones deshabilitados
+  ion-button[disabled] {
+    --background: #444; // Fondo gris oscuro para botones deshabilitados
+    --color: #666; // Texto gris claro
+  }
+  

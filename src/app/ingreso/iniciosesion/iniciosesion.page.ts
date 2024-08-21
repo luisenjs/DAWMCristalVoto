@@ -26,23 +26,24 @@ export class IniciosesionPage implements OnInit {
 
   ngOnInit() {
     this.loginForm = this.formBuilder.group({
-      username: ['', [Validators.required, Validators.pattern('^[0-9]{10}$')]],
-      password: ['', [Validators.required, Validators.pattern('^[0-9]{10}$')]]
+      iduser: ['', [Validators.required, Validators.pattern('^[0-9]{10}$')]],
+      password: ['', Validators.required]
     });
   }
 
   onLogin() {
     if (this.loginForm.valid) {
-      const { username, password } = this.loginForm.value;
+      const { iduser, password } = this.loginForm.value;
 
       const db = getDatabase();
-      const userRef = ref(db, `usuarios/${username}`);
+      const userRef = ref(db, `usuarios/${iduser}`);
 
       get(userRef).then((snapshot) => {
         if (snapshot.exists()) {
           const userData = snapshot.val();
-          if (userData.cedula === password) {
+          if (userData.contraseña === password) {
             this.userService.setUserCedula(userData.cedula);
+            this.loginForm.reset();
             this.router.navigate(['/tabs']);
           } else {
             alert('Contraseña incorrecta');

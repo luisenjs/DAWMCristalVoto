@@ -7,17 +7,34 @@
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">registroacta</ion-title>
+      <ion-title size="large">Registro de Acta</ion-title>
     </ion-toolbar>
   </ion-header>
+
+  <div class="photo-container">
+    <div *ngIf="!photoService.photos">
+      <img src="../../assets/placeholderIMG.png" alt="Tome la foto del acta" class="placeholder-img">
+    </div>
+    <div *ngIf="photoService.photos">
+      <img [src]="photoService.photos.webviewPath" alt="Tome la foto del acta">
+    </div>
+    <p *ngIf="!photoService.photos">Por favor, tome una foto del qr del acta.</p>
+  </div>
+
+  <ion-button *ngIf="photoService.photos" (click)="analizarQR()">
+    Analizar QR
+  </ion-button>
+
+  <ion-loading
+    [isOpen]="loading"
+    message="Analizando QR..."
+    spinner="circles"
+    duration="3000">
+  </ion-loading>
+
+  <ion-fab vertical="bottom" horizontal="center" slot="fixed">
+    <ion-fab-button (click)="addPhotoToGallery()">
+      <ion-icon name="camera"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
 </ion-content>
-
-<ion-button (click)="analizarQR()">
-  Analizar QR
-</ion-button>
-
-<ion-fab vertical="bottom" horizontal="center" slot="fixed">
-  <ion-fab-button (click)="addPhotoToGallery()">
-    <ion-icon name="camera"></ion-icon>
-  </ion-fab-button>
-</ion-fab>
