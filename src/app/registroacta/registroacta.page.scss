@@ -1,75 +1,48 @@
-// Estilos generales para el header
-ion-header {
-    --background: #000; // Fondo negro base
-    background: linear-gradient(135deg, #1e2e38, #1f1f1f, #1f1f1f, #1e2e38); // Gradiente oscuro
-  }
-  
-  // Estilos para el toolbar dentro del header
-  ion-toolbar {
-    --background: transparent; // Toolbar transparente para mostrar el gradiente
-  }
-  
-  // Estilo del título en el header
-  ion-title {
-    color: #ffffff; // Color del texto blanco
-  }
-  
-  // Estilos para el contenido principal
-  ion-content {
-    --background: #121212; // Fondo oscuro para el contenido
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 16px;
-  }
-  
-  // Estilos para el contenedor de la foto
-  .photo-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: #1e1e1e; // Fondo oscuro del contenedor
-    padding: 10px;
-    margin: 20px;
-    border-radius: 12px; // Bordes redondeados
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5); // Sombra más pronunciada
-    text-align: center;
-  }
-  
-  // Estilos para la imagen de marcador de posición
-  .placeholder-img {
-    width: 20%;
-    border-radius: 8px; // Bordes redondeados para la imagen
-    margin-bottom: 16px;
-  }
-  
-  // Estilos para el botón de analizar QR
-  ion-button {
-    display: flex;
-    justify-content: center;
-    margin: 20px;
-    margin-top: 12px;
-    border-radius: 12px; // Bordes redondeados para los botones
-    font-weight: bold; // Texto en negrita
-    --background: #6200ee; // Color de fondo morado oscuro
-    --color: #ffffff; // Color del texto blanco
-  }
-  
-  // Estilo para el botón flotante
-  ion-fab {
-    margin-top: 16px;
-  }
-  
-  // Estilo para el botón flotante
-  ion-fab-button {
-    --background: #6200ee; // Color de fondo verde claro
-    --color: #ffffff; // Color del ícono blanco
-    border-radius: 50%; // Bordes redondeados
-  }
-  
-  // Estilo para el ion-loading
-  ion-loading {
-    --background: #121212; // Fondo oscuro para el loading
-    --spinner-color: #ffffff; // Color del spinner blanco
-  }
-  
+.photo-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #1e1e1e; // Fondo oscuro del contenedor
+  padding: 10px;
+  margin: 20px;
+  border-radius: 12px; // Bordes redondeados
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5); // Sombra más pronunciada
+  text-align: center;
+}
+
+// Estilos para la imagen de marcador de posición
+.placeholder-img {
+  width: 20%;
+  border-radius: 8px; // Bordes redondeados para la imagen
+  margin-bottom: 16px;
+}
+
+// Estilos para el botón de analizar QR
+ion-button {
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+  margin-top: 12px;
+  border-radius: 12px; // Bordes redondeados para los botones
+  font-weight: bold; // Texto en negrita
+  --background: #6200ee; // Color de fondo morado oscuro
+  --color: #ffffff; // Color del texto blanco
+}
+
+// Estilo para el botón flotante
+ion-fab {
+  margin-top: 16px;
+}
+
+// Estilo para el botón flotante
+ion-fab-button {
+  --background: #6200ee; // Color de fondo verde claro
+  --color: #ffffff; // Color del ícono blanco
+  border-radius: 50%; // Bordes redondeados
+}
+
+// Estilo para el ion-loading
+ion-loading {
+  --background: #121212; // Fondo oscuro para el loading
+  --spinner-color: #ffffff; // Color del spinner blanco
+}
