@@ -1,19 +1,21 @@
 import { Component, OnInit, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormBuilder, FormGroup, Validators, FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { IonContent, IonHeader, IonTitle, IonToolbar, IonButton, IonItem, IonLabel, IonInput, IonSelect, IonSelectOption } from '@ionic/angular/standalone';
+import { IonContent, IonHeader, IonTitle, IonToolbar, IonButton, IonItem, IonLabel, IonInput, IonSelect, IonSelectOption, IonIcon, IonButtons } from '@ionic/angular/standalone';
 import { initializeApp } from 'firebase/app';
 import { getDatabase, ref, set } from 'firebase/database';
 import { environment } from '../../../environments/environment';
 import { Router } from '@angular/router';
 import { AlertController } from '@ionic/angular';
+import { arrowBack } from 'ionicons/icons';
+import { addIcons } from 'ionicons';
 
 @Component({
   selector: 'app-registro',
   templateUrl: './registro.page.html',
   styleUrls: ['./registro.page.scss'],
   standalone: true,
-  imports: [IonContent, IonHeader, IonTitle, IonToolbar, IonButton, IonItem, IonLabel, IonInput, IonSelect, IonSelectOption, CommonModule, FormsModule, ReactiveFormsModule]
+  imports: [IonButtons, IonIcon, IonContent, IonHeader, IonTitle, IonToolbar, IonButton, IonItem, IonLabel, IonInput, IonSelect, IonSelectOption, CommonModule, FormsModule, ReactiveFormsModule]
 })
 export class RegistroPage implements OnInit {
 
@@ -23,6 +25,8 @@ export class RegistroPage implements OnInit {
   database: any;
 
   constructor(private formBuilder: FormBuilder, private alertController: AlertController) {
+    addIcons({ arrowBack });
+    
     this.registroForm = this.formBuilder.group({});
     const app = initializeApp(environment.firebaseConfig);
     this.database = getDatabase(app);
@@ -68,6 +72,10 @@ export class RegistroPage implements OnInit {
           console.error('Error al guardar datos: ', error);
         });
     }
+  }
+
+  regresar() {
+    this.router.navigate(['/'])
   }
 
 }
