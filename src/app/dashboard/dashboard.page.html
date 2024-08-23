@@ -5,9 +5,31 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">dashboard</ion-title>
-    </ion-toolbar>
-  </ion-header>
+
+  <ion-card>
+
+    <ion-card-header>
+      <ion-card-title>Elecciones Presidenciales</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <div id="chart">
+        <apx-chart
+          [series]="chartOptions.series"
+          [chart]="chartOptions.chart"
+          [xaxis]="chartOptions.xaxis"
+          [dataLabels]="chartOptions.dataLabels"
+          [plotOptions]="chartOptions.plotOptions"
+          [title]="chartOptions.title">
+        </apx-chart>
+      </div>
+    </ion-card-content>
+
+  </ion-card>
+
+  
+
+  
+
+
 </ion-content>
