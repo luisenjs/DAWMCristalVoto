@@ -7,9 +7,9 @@ export const routes: Routes = [
     component: TabsPage,
     children: [
       {
-        path: 'configuracion',
+        path: 'dashboard',
         loadComponent: () =>
-          import('../configuracion/configuracion.page').then((m) => m.ConfiguracionPage),
+          import('../dashboard/dashboard.page').then((m) => m.DashboardPage),
       },
       {
         path: 'actas',
