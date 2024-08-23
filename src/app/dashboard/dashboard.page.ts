@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { IonContent, IonHeader, IonTitle, IonToolbar, IonCard, IonCardTitle, IonCardHeader, IonCardContent } from '@ionic/angular/standalone';
-import { ApexAxisChartSeries, ApexChart, ApexXAxis, ApexYAxis, ApexDataLabels, ApexPlotOptions, ApexTitleSubtitle, NgApexchartsModule, ApexTooltip } from 'ng-apexcharts';
+import { ApexAxisChartSeries, ApexChart, ApexXAxis, ApexYAxis, ApexDataLabels, ApexPlotOptions, ApexTitleSubtitle, NgApexchartsModule, ApexTooltip, ApexLegend } from 'ng-apexcharts';
 
 @Component({
   selector: 'app-dashboard',
@@ -22,6 +22,7 @@ export class DashboardPage implements OnInit {
     plotOptions: ApexPlotOptions;
     title: ApexTitleSubtitle;
     tooltip: ApexTooltip;
+    legend: ApexLegend;
   };
 
   constructor() {
@@ -52,26 +53,32 @@ export class DashboardPage implements OnInit {
         categories: ["Daniel Noboa - ADN", "Luisa Gonzalez - RC", "Jan Topic - PSC", "Christian Zurita - MC25"],
         labels: {
           style: {
-            colors: ['#ffffff'],
+            colors: ['#DBDBDB'],
           }
         }
       },
       yaxis: {
         labels: {
           style: {
-            colors: ['#ffffff'],
+            colors: ['#DBDBDB'],
           }
         }
       },
       title: {
         text: "Gráfico de Barras",
         style: {
-          color: '#ffffff'
+          color: '#DBDBDB'
         }
+      },
+      legend: {
+        labels: {
+          colors: '#DBDBDB',
+          useSeriesColors: false
+        },
       },
       tooltip: {
         theme: 'dark',
-      }
+      },
     }
   };
 
